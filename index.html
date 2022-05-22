@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Overpass:wght@500&family=Smooch&family=Ubuntu:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav id="nav-bar" class="top-nav">
+      <h1 class="sr-only">navigation bar</h1>
+      <header>
+        <a href="#" id="home-icon" class="left-home">
+          <img src="assets/home_icon.svg" alt="Home Logo" />
+        </a>
+        <div id="logout-container" class="right-logout hidden">
+          <h1 id="username-title" class="title"></h1>
+          <input type="button" value="Logout" id="logout-btn" class="nav-btn" />
+        </div>
+      </header>
+    </nav>
+    <main>
+      <section id="clock-container">
+        <h1 class="sr-only">current time is</h1>
+        <div id="clock-content" class="center-clock">
+          <p id="date-element" class="date"></p>
+          <strong id="time-element" class="time"></strong>
+        </div>
+      </section>
+      <section id="login-container" class="center-login-form hidden">
+        <h1 class="sr-only">Enter your name to log-in</h1>
+        <form id="login-form">
+          <input
+            type="text"
+            id="login-input"
+            class="input-box"
+            placeholder="Enter Your Name"
+            maxlength="12"
+            required
+          />
+          <input type="submit" value="Login" id="login-btn" class="form-btn" />
+        </form>
+      </section>
+      <section id="todo-container" class="center-todo-form hidden">
+        <h1 class="sr-only">Today's Todo List</h1>
+        <div id="todo-group" class="center-todo-list">
+          <form>
+            <input
+              type="text"
+              id="todo-input"
+              class="input-box todo"
+              placeholder="Write your ToDos"
+            />
+          </form>
+          <ol id="todo-list" class="todo-list"></ol>
+        </div>
+      </section>
+      <section id="quotes-container" class="bottom-quotes-container">
+        <h1 class="sr-only">Today's quote and author</h1>
+        <div id="quotes-group" class="bottom-quotes">
+          <span id="quote" class="quotes"></span>
+          <span id="author" class="authors"></span>
+        </div>
+      </section>
+      <section id="weather-container" class="top-left-weather">
+        <h1 class="sr-only">Now Weather</h1>
+        <div id="weather-group" class="column-weather">
+          <span id="city" class="city"></span>
+          <span id="weather" class="weather"></span>
+          <span id="temp" class="temp"></span>
+        </div>
+      </section>
+    </main>
+    <script src="./js/weather.js" type="module"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/quotes.js"></script>
+  </body>
+</html>

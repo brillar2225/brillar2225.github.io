@@ -1,0 +1,303 @@
+/* Entire setting */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Reset CSS */
+.sr-only {
+  position: absolute;
+  z-index: -100;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+input,
+button {
+  border: none;
+  border-radius: 2px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active {
+  outline: none;
+  box-shadow: none;
+}
+
+input::placeholder {
+  color: #282828;
+  font-weight: 500;
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 20px;
+  line-height: 1.0526315789;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* navigation bar */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.top-nav header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  transform: translateY(2%);
+}
+
+.left-home {
+  padding-left: 15px;
+}
+
+.left-home img {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.right-logout {
+  padding-right: 15px;
+}
+
+.title {
+  display: inline-block;
+  height: 28px;
+  padding-right: 5px;
+  font-size: 20px;
+  line-height: 1.0526315789;
+  letter-spacing: -0.01em;
+}
+
+.nav-btn {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* clock-container */
+.center-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Overpass', sans-serif;
+}
+
+.date {
+  font-size: 50px;
+  line-height: 1.0416666667;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 62px;
+  line-height: 1.0689655172;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+/* Login Container */
+.input-box {
+  display: block;
+  width: 270px;
+  padding: 8px 16px;
+  font-size: 20px;
+  line-height: 1.0526315789;
+  letter-spacing: -0.01em;
+}
+
+.form-btn {
+  display: block;
+  width: 270px;
+  padding: 3px 9px;
+  margin-top: 5px;
+  padding: 8px 16px;
+  font-size: 20px;
+  line-height: 1.0526315789;
+  letter-spacing: -0.01em;
+}
+
+/* To-Do list */
+.center-todo-form {
+  margin-top: 15px;
+}
+
+.input-box.todo {
+  border: none;
+  border-bottom: 3px solid #283593;
+  background: none;
+}
+
+.todo-list {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.todo-list li {
+  margin-top: 7px;
+  border-radius: 2px;
+  background-color: rgba(226, 226, 226, 0.372);
+}
+
+.todo-list input {
+  margin: 0 5px;
+}
+
+.todo-list span {
+  margin-right: 7px;
+}
+
+.todo-list button {
+  width: 18px;
+  height: 18px;
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+/* Quotes */
+.bottom-quotes-container {
+  position: absolute;
+  bottom: 5px;
+  font-family: 'Smooch', cursive;
+  font-size: 22px;
+  line-height: 1.0476190476;
+  letter-spacing: -0.02em;
+}
+
+.bottom-quotes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Weather */
+.top-left-weather {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+}
+
+.column-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* display min-width >= 768px */
+@media screen and (min-width: 768px) {
+  /* navigation bar */
+  .top-nav header {
+    height: 50px;
+  }
+
+  .left-home img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 1.0344827586;
+  }
+
+  .nav-btn {
+    height: 32px;
+    top: -4px;
+  }
+
+  /* login-container */
+  .center-login-form form {
+    margin-top: 10px;
+  }
+
+  .input-box {
+    display: inline-block;
+    width: 319px;
+    padding: 12px 20px;
+  }
+
+  .form-btn {
+    display: inline-block;
+    width: 79px;
+    height: 43px;
+    margin: 0;
+  }
+
+  /* To-Do List */
+  .center-todo-form {
+    margin-top: 20px;
+  }
+
+  .todo-list li {
+    margin-top: 10px;
+  }
+
+  .todo-list input {
+    margin: 0 7px;
+  }
+
+  .todo-list span {
+    margin-right: 10px;
+  }
+
+  /* Quotes */
+  .bottom-quotes-container {
+    bottom: 10px;
+    font-size: 30px;
+    line-height: 1.0714285714;
+  }
+
+  /* Weather */
+  .top-left-weather {
+    top: 65px;
+    left: 25px;
+  }
+}
